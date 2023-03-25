@@ -1,0 +1,106 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "background": "#2E313D",
+          "foreground": "#CCCCCB",
+          "style": "plain",
+          "template": " \uf0e7 ",
+          "type": "root"
+        },
+        {
+          "background": "#2E313D",
+          "foreground": "#CCCCCB",
+          "style": "plain",
+          "template": "{{ if .SSHSession }}\uf817 {{ end }}{{if .Root}}<#cc2222>{{ .UserName }}</>{{end}}{{ .UserName }}@{{ if .SSHSession }}<#cc2222>{{ end }}{{ .HostName }}{{ if .SSHSession }}</>{{ end }}<#c0D7FF>\ue0b1</>",
+          "type": "session"
+        },
+        {
+          "background": "#2E313D",
+          "foreground": "#CCCCCB",
+          "properties": {
+            "mixed_threshold": 10,
+            "style": "mixed"
+          },
+          "style": "plain",
+          "template": " {{ .Path }}<#c0D7FF>\ue0b1</>",
+          "type": "path"
+        },
+        {
+          "background": "#2E313D",
+          "foreground": "#CCCCCB",
+          "foreground_templates": [
+            "{{ if and (.Working.Changed) (.Staging.Changed) }}#7a7934{{ end }}",
+            "{{ if (.Working.Changed) }}#4B89C3{{ end }}",
+            "{{ if (.Staging.Changed) }}#50785E{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#2E313D{{ end }}",
+            "{{ if gt .Ahead 0 }}#290042{{ end }}",
+            "{{ if gt .Behind 0 }}#290042{{ end }}"
+          ],
+          "properties": {
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": true
+          },
+          "style": "plain",
+          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }}<#c0D7FF>\ue0b1</>",
+          "type": "git"
+        },
+        {
+          "background": "#2E313D",
+          "foreground": "#CCCCCB",
+          "style": "plain",
+          "template": " {{ .WorkspaceName }}{{ if .Version }} {{ .Version }}{{ end }}<#c0D7FF>\ue0b1</>",
+          "type": "terraform"
+        },
+        {
+          "background": "#2E313D",
+          "foreground": "#CCCCCB",
+          "properties": {
+            "fetch_package_manager": false
+          },
+          "style": "plain",
+          "template": " {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}<#c0D7FF>\ue0b1</>",
+          "type": "node"
+        },
+        {
+          "background": "#2E313D",
+          "foreground_templates": [
+            "{{ if eq .Code 2 }}#4B89C3{{ end }}",
+            "{{ if eq .Code 130 }}#7A7934{{ end }}",
+            "{{ if gt .Code 0 }}#EC0102{{ end }}"
+          ],
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "plain",
+          "template": " {{if ne .Code 0}}{{.Meaning}}{{else}}OK{{end}}",
+          "type": "exit"
+        },
+        {
+          "background": "transparent",
+          "foreground_templates": [
+            "{{ if eq .Code 2 }}#4B89C3{{ end }}",
+            "{{ if eq .Code 130 }}#7A7934{{ end }}",
+            "{{ if gt .Code 0 }}#EC0102{{ end }}",
+            "{{ if eq .Code 0 }}#2E313D{{ end }}"
+          ],
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "plain",
+          "template": "<foreground>\ue0b0</>\u0000",
+          "type": "exit"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "console_title_template": "{{ .Shell }} in {{ .Folder }}",
+  "final_space": true,
+  "version": 2
+}
