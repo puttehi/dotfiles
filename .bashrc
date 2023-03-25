@@ -158,7 +158,6 @@ alias protonappdata="~/protonappdata.sh"
 
 ### bat-cat ###
 # make bat-cat replace cat (syntax highlighting)
-alias batcat="bat"
 alias cat="bat -p --paging never"
 # use bat-cat as man pager
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
@@ -200,7 +199,7 @@ export NVM_DIR="$HOME/.nvm"
 #_NVM_TLDR_PATH="/home/puttehi/.nvm/versions/node/v18.4.0/bin/tldr"
 #DEBUG: ls /home/puttehi/.nvm/versions/node/v18.4.0/bin
 btldr() {
-    nvm exec --silent 18 tldr "$@" 2>&1 | bat --plain --no-pager --language=help
+    nvm exec --silent 18 tldr "$@" 2>&1 | bat --plain --paging=never --language=help
 }
 alias bt="btldr"
 
