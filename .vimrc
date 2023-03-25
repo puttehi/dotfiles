@@ -25,7 +25,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='powerlineish'
 " let g:ycm_auto_trigger=1
 Plugin 'lilydjwg/colorizer'
-Plugin 'valloric/youcompleteme'
+"Plugin 'valloric/youcompleteme'
 Plugin 'kien/rainbow_parentheses.vim'
 " always on
 au VimEnter * RainbowParenthesesToggle
