@@ -158,6 +158,7 @@ alias protonappdata="~/protonappdata.sh"
 
 ### bat-cat ###
 # make bat-cat replace cat (syntax highlighting)
+alias batcat="bat"
 alias cat="bat -p --no-pager"
 # use bat-cat as man pager
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
