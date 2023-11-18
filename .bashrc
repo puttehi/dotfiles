@@ -207,7 +207,7 @@ alias bt="btldr"
 alias _pav="poetry shell"
 
 ### Sensible tree default ###
-alias tree="tree -L 1 -a"
+alias tree="tree -L 3 -a --gitignore"
 
 ### Greeting ###
 source $HOME/greeting.sh
