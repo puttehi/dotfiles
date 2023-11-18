@@ -222,3 +222,12 @@ export PATH="$PATH:$HOME/go/bin"
 
 # Dotfiles git alias
 alias dotgit='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+
+# better ls? way too colorful
+alias ls="exa"
+alias tree="exa --tree --level=2"
+# lowercase c in exa
+alias l='ls -cF'
+
+# Luarocks binaries from `luarock ... --local`
+export PATH="$PATH:$HOME/.luarocks/bin"
