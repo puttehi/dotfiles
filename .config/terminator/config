@@ -14,10 +14,11 @@
   help = ""
 [profiles]
   [[default]]
+    allow_bold = False
     background_darkness = 0.9
     background_type = transparent
     cursor_color = "#aaaaaa"
-    font = FuraMono Nerd Font Mono Medium 10
+    font = FiraMono Nerd Font Mono Medium 10
     scrollback_lines = 20000
     use_system_font = False
 [layouts]
