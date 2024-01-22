@@ -231,3 +231,6 @@ alias l='ls -cF'
 
 # Luarocks binaries from `luarock ... --local`
 export PATH="$PATH:$HOME/.luarocks/bin"
+
+# Dotfiles lazygit alias
+alias dotlazygit='/usr/local/bin/lazygit --git-dir=$HOME/dotfiles --work-tree=$HOME'
