@@ -6,7 +6,8 @@
 	status = auto
 	branch = auto
 [core]
-    editor = /usr/bin/vim
+    #editor = /usr/bin/vim
+    editor = /usr/local/bin/nvim
     pager = delta
 [interactive]
     diffFilter = delta --color-only
