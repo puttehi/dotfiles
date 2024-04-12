@@ -1,0 +1,39 @@
+[user]
+	name = puttehi
+	email = peteeez95@gmail.com
+[color]
+    diff = auto
+	status = auto
+	branch = auto
+[core]
+    #editor = /usr/bin/vim
+    #editor = /usr/local/bin/nvim
+    editor = ~/neovim/bin/nvim
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[add.interactive]
+    useBuiltin = false # required for git 2.37.0
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+    side-by-side = true
+[merge]
+    conflictstyle = diff3
+[diff]
+    tool = batdiff
+    colorMoved = default
+[difftool "batdiff"]
+    cmd = ~/bin/batdiff
+[difftool]
+    prompt = false
+[alias]
+	co = checkout
+	s = status
+	fa = fetch --all
+    cob = checkout -b
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lga = lg --all
+    showtool = "!showci () { rev=${1:-HEAD}; git difftool $rev~1 $rev; }; showci $1"
+    po = push -u origin
+    cane = commit --amend --no-edit
