@@ -21,3 +21,19 @@ echo ""
 
 ~/install-nvm-v0.39.7.sh
 
+
+echo ""
+echo "VIM setup"
+echo ""
+
+~/install-vundle.sh
+
+echo ""
+echo "Installing VIM plugins automatically (assuming vimrc)"
+echo ""
+
+vim +PluginInstall +qall
+
+echo ""
+echo "* Done *"
+echo ""
