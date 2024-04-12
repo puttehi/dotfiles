@@ -177,7 +177,7 @@ alias rg="rg --hidden"
 ### fzf hacks ###
 # Use bat for previewing files on the side
 # Use ctrl+f to move down, ctrl+b to move up like unix usually has f and b
-FZF_CTRL_T_OPTS="\
+export FZF_CTRL_T_OPTS="\
     --preview 'bat --style=numbers,header,snip --color=always --line-range :500 {}' \
     --preview-window 'right,60%,border-left,+{2}+3/3,~3' \
     --bind \"ctrl-f:preview-down,ctrl-b:preview-up,ctrl-v:execute(vim {} &> /dev/tty)+refresh-preview,ctrl-g:execute(codium -r {})+abort\""
@@ -240,5 +240,5 @@ export PATH="$PATH:$HOME/.luarocks/bin"
 # Dotfiles lazygit alias
 alias dotlazygit='/usr/local/bin/lazygit --git-dir=$HOME/dotfiles --work-tree=$HOME'
 
-# Neovim custom path (built with: make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/neovim" CMAKE_BUILD_TYPE=Release && make install) 
+# Neovim custom path (built with: make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/neovim" CMAKE_BUILD_TYPE=Release && make install)
 export PATH="$HOME/neovim/bin:$PATH"
