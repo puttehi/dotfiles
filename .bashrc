@@ -187,15 +187,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-### tldr (fast to digest man pages) ###
-# Use bat for tldr
-#_NVM_TLDR_PATH="/home/puttehi/.nvm/versions/node/v18.4.0/bin/tldr"
-#DEBUG: ls /home/puttehi/.nvm/versions/node/v18.4.0/bin
-btldr() {
-    nvm exec --silent 18 tldr "$@" 2>&1 | bat --plain --paging=never --language=help
-}
-alias bt="btldr"
-
 ### poetry shell alias ###
 alias _pav="poetry shell"
 
