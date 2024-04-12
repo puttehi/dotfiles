@@ -153,8 +153,8 @@ source /usr/share/doc/fzf/examples/key-bindings.bash
 ### Dotdrop ###
 alias dotdrop="~/dev/repos/dotfiles/dotdrop.sh"
 
-### Steam Proton appdata memo for dummies ###
-alias protonappdata="~/protonappdata.sh"
+### Steam memo for linux hacks, paths and stuff ###
+alias steamhackbook="cat ~/steam-hackbook-markdown.md"
 
 ### bat-cat ###
 # make bat-cat replace cat (syntax highlighting)
@@ -210,15 +210,20 @@ alias _pav="poetry shell"
 alias tree="tree -L 3 -a --gitignore"
 
 ### Greeting ###
-source $HOME/greeting.sh
+source "$HOME/greeting.sh"
 
 export PATH="/home/$USER/bin:$PATH"
 
 # Flatpak Protontricks
 alias protontricks="flatpak run com.github.Matoking.protontricks"
 
+# Go installation in newer versions (might have old version in /usr/bin/go)
+# NOTE: Prependend to force finding the new one first
+export PATH="/usr/local/go/bin:$PATH"
+
 # Go binaries from `go install`
 export PATH="$PATH:$HOME/go/bin"
+
 
 # Dotfiles git alias
 alias dotgit='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
@@ -234,3 +239,6 @@ export PATH="$PATH:$HOME/.luarocks/bin"
 
 # Dotfiles lazygit alias
 alias dotlazygit='/usr/local/bin/lazygit --git-dir=$HOME/dotfiles --work-tree=$HOME'
+
+# Neovim custom path (built with: make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/neovim" CMAKE_BUILD_TYPE=Release && make install) 
+export PATH="$HOME/neovim/bin:$PATH"
