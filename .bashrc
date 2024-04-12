@@ -139,19 +139,12 @@ alias vi=vim
 __OH_MY_POSH_THEME_FILE__=putte.omp.json
 eval "$(oh-my-posh --init --shell bash --config ~/.poshthemes/$__OH_MY_POSH_THEME_FILE__)"
 
-## Dotdrop alias
-#alias dotdrop=~/dotfiles/dotdrop.sh --cfg=~/dotfiles/config.yaml
-# NOTE: Seems to be deprecated? Maybe?
-
 # shorter cd ..
 alias ..="cd .."
 
 ### fzf ###
 # New way of activating fzf keybinding it seems
 source /usr/share/doc/fzf/examples/key-bindings.bash
-
-### Dotdrop ###
-alias dotdrop="~/dev/repos/dotfiles/dotdrop.sh"
 
 ### Steam memo for linux hacks, paths and stuff ###
 alias steamhackbook="cat ~/steam-hackbook-markdown.md"
