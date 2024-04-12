@@ -7,6 +7,8 @@
 
 > `.bashrc` should already have this set as an alias: `alias dotgit='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'`
 
+Install the NerdFont ([LICENSE](https://github.com/ryanoasis/nerd-fonts/blob/master/LICENSE)) in your system, and change it in the terminal emulator (`.local/share/fonts/FiraMonoNerdFontMono-Medium.ttf`).
+
 ## Troubleshooting
 
 ### Missing tools?
