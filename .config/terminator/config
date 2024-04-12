@@ -1,6 +1,7 @@
 [global_config]
   title_receive_fg_color = "#c80003"
   suppress_multiple_term_dialog = True
+  case_sensitive = False
 [keybindings]
   split_horiz = <Alt>underscore
   split_vert = <Alt>question
