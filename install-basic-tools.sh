@@ -7,7 +7,7 @@ echo "Check for prompts!"
 echo ""
 
 sudo apt update
-sudo apt install git python3 python3-venv curl wget ripgrep fd-find bat fzf tldr tree zoxide lolcat gcc clang golang make unzip git-delta
+sudo apt install git python3 python3-venv curl wget ripgrep fd-find bat fzf tldr tree zoxide lolcat gcc clang golang make unzip git-delta terminator
 
 echo ""
 echo "Oh My Posh (requires wget)"
